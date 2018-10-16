@@ -141,10 +141,10 @@ export function updateCost  ( cost ){
     }
 }
 
-export function updateDownPayment ( downPayment ){
+export function updateDownPayment ( payment ){
     return {
         type: UPDATE_DOWN_PAYMENT,
-        payload: downPayment
+        payload: payment
     }
 }
 

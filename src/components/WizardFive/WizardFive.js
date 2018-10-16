@@ -5,15 +5,15 @@ import { connect } from 'react-redux';
 import { updateAgent } from '../../ducks/reducer';
 
 class WizardFive extends Component {
-
-    render(){
+    render() {
         const { updateAgent } = this.props;
+
         return(
             <div className="parent-div">
                     <div className="vert-align">    
-
                     <p>Are you currently working with a real estate agent?</p> <br />
                     <div className="row">
+
                         <Link to="/wSix">
                             <button onClick={ () => updateAgent ( true ) }>Yes</button>
                         </Link>
@@ -21,6 +21,7 @@ class WizardFive extends Component {
                         <Link to="/wSix">
                             <button onClick={ () => updateAgent ( false ) }>No </button>
                         </Link>
+
                     </div>
                 </div>
             </div>
@@ -36,4 +37,4 @@ function mapStateToProps( state ) {
     };
 }
 
-export default connect( mapStateToProps, { updateAgent} ) (WizardFive);
+export default connect( mapStateToProps, { updateAgent } ) ( WizardFive );
