@@ -37,7 +37,7 @@ class WizardSeven extends Component {
     }
 }
 
-function mapStateProps( state ) {
+function mapStateToProps( state ) {
     const { credit } = state;
 
     return {
@@ -45,4 +45,4 @@ function mapStateProps( state ) {
     };
 }
 
-export default connect( mapStateProps, { updateCredit } ) (WizardSeven);
+export default connect( mapStateToProps, { updateCredit } ) (WizardSeven);

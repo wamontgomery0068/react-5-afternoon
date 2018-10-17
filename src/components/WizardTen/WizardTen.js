@@ -6,6 +6,7 @@ import { updateFirst, updateLast, updateEmail } from '../../ducks/reducer';
 
 class WizardTen extends Component {
     render(){
+        const { updateFirst, updateLast, updateEmail } = this.props;
 
         return(
             <div className="parent-div">

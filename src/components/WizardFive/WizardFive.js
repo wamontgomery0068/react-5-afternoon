@@ -15,11 +15,11 @@ class WizardFive extends Component {
                     <div className="row">
 
                         <Link to="/wSix">
-                            <button onClick={ () => updateAgent ( true ) }>Yes</button>
+                            <button onClick={ () => updateAgent ( 'true' ) }>Yes</button>
                         </Link>
 
                         <Link to="/wSix">
-                            <button onClick={ () => updateAgent ( false ) }>No </button>
+                            <button onClick={ () => updateAgent ( 'false' ) }>No </button>
                         </Link>
 
                     </div>

@@ -12,13 +12,13 @@ const initialState = {
     addressOne: '',
     addressTwo: '',
     addressThree: '',
-    firstName: 'aa',
+    firstName: '',
     lastName: '',
     email: ''
 }
 
 const UPDATE_LOAN_TYPE="UPDATE_LOAN_TYPE";
-const UPDATE_PROPERTY_TYPE="UPDATE_PROPERTTY_TYPE";
+const UPDATE_PROPERTY_TYPE="UPDATE_PROPERTY_TYPE";
 const UPDATE_CITY="UPDATE_CITY";
 const UPDATE_PROP="UPDATE_PROP";
 const UPDATE_FOUND="UPDATE_FOUND";
@@ -52,7 +52,7 @@ function reducer( state = initialState, action) {
             return Object.assign( {}, state, { city: action.payload } );
 
         case UPDATE_PROP:
-            return Object.assign( {}, state, { prop: action.payload} );
+            return Object.assign( {}, state, { propToBeUsedOn: action.payload} );
 
         case UPDATE_AGENT:
             return Object.assign( {}, state, { agent: action.payload} );
@@ -96,49 +96,49 @@ export function updateLoanType( loanType ){
     return {
         type: UPDATE_LOAN_TYPE,
         payload: loanType
-    }
+    };
 }
 
 export function updatePropertyType( property ){
     return {
         type: UPDATE_PROPERTY_TYPE,
-        payloan: property
-    }
+        payload: property
+    };
 }
 
 export function updateFound( found ){
     return {
         type: UPDATE_FOUND,
         payload: found
-    }
+    };
 }
 
-export function updateCity ( city ){
+export function updateCity( city ){
     return {
         type: UPDATE_CITY,
         payload: city
-    }
+    };
 }
 
-export function updateProp ( prop ){
+export function updateProp( propToBeUsedOn ){
     return {
         type: UPDATE_PROP,
-        payload: prop
-    }
+        payload: propToBeUsedOn
+    };
 }
 
-export function updateAgent ( agent ){
+export function updateAgent( agent ){
     return {
         type: UPDATE_AGENT,
         payload: agent
-    }
+    };
 }
 
-export function updateCost  ( cost ){
+export function updateCost( cost ){
     return {
         type: UPDATE_COST,
         payload: cost
-    }
+    };
 }
 
 export function updateDownPayment ( payment ){
@@ -148,60 +148,60 @@ export function updateDownPayment ( payment ){
     }
 }
 
-export function updateCredit ( credit ){
+export function updateCredit( credit ){
     return {
         type: UPDATE_CREDIT,
         payload: credit
-    }
+    };
 }
 
-export function updateHistory ( history ){
+export function updateHistory( history ){
     return {
         type: UPDATE_HISTORY,
         payload: history
-    }
+    };
 }
 
-export function updateAddress1 ( address ){
+export function updateAddress1( address ){
     return {
         type: UPDATE_ADDRESS_1,
         payload: address
-    }
+    };
 }
 
-export function updateAddress2 ( address ){
+export function updateAddress2( address ){
     return {
         type: UPDATE_ADDRESS_2,
         payload: address
-    }
+    };
 }
 
-export function updateAddress3 ( address ){
+export function updateAddress3( address ){
     return {
         type: UPDATE_ADDRESS_3,
         payload: address
-    }
+    };
 }
 
-export function updateFirst ( first ){
+export function updateFirst( first ){
     return {
         type: UPDATE_FIRST,
         payload: first
-    }
+    };
 }
 
-export function updateLast ( last ){
+export function updateLast( last ){
     return {
         type: UPDATE_LAST,
         payload: last
-    }
+    };
 }
 
-export function updateEmail ( email ){
+export function updateEmail( email ){
     return {
         type: UPDATE_EMAIL,
         payload: email
-    }
+    };
 }
 
 export default reducer;
